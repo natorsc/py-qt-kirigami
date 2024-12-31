@@ -1,0 +1,39 @@
+[project]
+name = "py-qt-kirigami"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pyside6==6.8.1",
+]
+
+[dependency-groups]
+dev = [
+    "requirements-parser>=0.11.0",
+    "ruff>=0.8.4",
+    "taskipy>=1.14.1",
+]
+build = [
+    "nuitka>=2.5.9",
+]
+
+[project.gui-scripts]
+app-name = "app.main:main"
+
+[tool.ruff]
+line-length = 79
+extend-exclude = [".venv", "docs", "build", ".flatpak-builder", "flatpak-build-dir", "resources_rc.py"]
+
+[tool.ruff.lint]
+select = ["I", "F", "E", "W", "PL", "PT"]
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.taskipy.tasks]
+designer = "pyside6-designer"
+format = "ruff check . --select I --fix && ruff format ."
+setup = "python tools.py"
+tr = "pyside6-linguist"
+
