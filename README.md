@@ -38,6 +38,80 @@ https://github.com/sponsors/natorsc/
 
 ---
 
+## Install Kirigami
+
+### Arch Linux
+
+**PySide6**:
+
+```bash
+sudo pacman -S \
+pyside6 \
+kirigami \
+flatpak-builder \
+qqc2-desktop-style \
+appstream
+```
+
+**PyQt6**:
+
+```bash
+sudo pacman -S \
+python-pyqt6 \
+kirigami \
+flatpak-builder \
+qqc2-desktop-style \
+appstream
+```
+
+#### openSUSE
+
+**PySide6**:
+
+```bash
+sudo zypper install \
+python3-pyside6 \
+kf6-kirigami-devel \
+flatpak-builder \
+qqc2-desktop-style \
+AppStream-compose
+```
+
+**PyQt6**:
+
+```bash
+sudo zypper install \
+python3-PyQt6 \
+kf6-kirigami-devel \
+flatpak-builder \
+qqc2-desktop-style \
+AppStream-compose
+```
+
+#### Fedora
+
+**PySide6**:
+
+```bash
+sudo dnf install \
+python3-pyside6 \
+kf6-kirigami-devel \
+flatpak-builder \
+qqc2-desktop-style \
+appstream-compose
+```
+
+**PyQt6**:
+
+```bash
+sudo dnf install \
+python3-pyqt6 \
+kf6-kirigami-devel \
+flatpak-builder \
+qqc2-desktop-style \
+appstream-compose
+```
+
 ---
 
 ## Flatpak pip generator
